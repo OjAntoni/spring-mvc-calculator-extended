@@ -16,7 +16,7 @@ import java.util.List;
 public class OperationService {
     private final OperationDao operationDao;
 
-    public OperationService(@Qualifier("inMemoryOperationDao") OperationDao operationDao) {
+    public OperationService(@Qualifier("hibernateOperationDao") OperationDao operationDao) {
         this.operationDao = operationDao;
     }
 

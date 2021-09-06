@@ -1,6 +1,7 @@
 package org.example;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+import org.hibernate.Interceptor;
 import org.hibernate.cfg.Environment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +11,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
@@ -20,7 +22,7 @@ import java.util.Properties;
 @Configuration
 @ComponentScan(basePackages = "org.example")
 @EnableTransactionManagement
-public class WebConfiguration {
+public class WebConfiguration{
 
     @Bean
     public LocalSessionFactoryBean sessionFactory(){
@@ -45,7 +47,7 @@ public class WebConfiguration {
         basicDataSource.setDriverClassName("org.postgresql.Driver");
         basicDataSource.setUrl("jdbc:postgresql://localhost:5432/calculator");
         basicDataSource.setUsername("postgres");
-        basicDataSource.setPassword("***");
+        basicDataSource.setPassword("123414");
         return basicDataSource;
     }
 

@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @Entity
-@Inheritance
 public class SimpleNumber extends AbstractNumber {
     public double value;
 
